@@ -146,7 +146,7 @@ class _MyHomePageState extends State<MyHomePage> {
   Future<int> sumStream(Stream<String> stream) async {
     var sum = 0;
     await for (final value in stream) {
-      // _concatenateString(value.toString());
+      _concatenateString(value.toString());
       sum += 1;
       _incrementCounter();
     }
@@ -156,7 +156,7 @@ class _MyHomePageState extends State<MyHomePage> {
   Stream<String> countStream(int to) async* {
     final response =
         await rootBundle.loadString('assets/markdown_test_page.md');
-      _concatenateString(response.toString());
+      // _concatenateString(response.toString());
 
     int i = 0;
     while (i < response.length) {
